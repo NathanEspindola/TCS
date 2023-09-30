@@ -16,7 +16,7 @@ jobs:
   - name: install_packages
     run: "sudo apt-get update; sudo apt-get -y install cppcheck-gui cppcheck clang valgrind"
   - name: cppcheck
-    run: "cd app; make cppcheck"
+    run: "cd Unity_TCS/examples/T1; make cppcheck"
   - name: make
     run: "cd app; make"
   - name: cov
