@@ -13,14 +13,14 @@ TEST(Sort, Test1) //TESTA UM VETOR SEM DADOS
   int vec[] = {};
   int tam = 0;
 
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On", COUNTING));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On", RADIX));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On2", BUBBLE));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On2", INSERTION));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On2", SELECTION));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "Onlogn", HEAP));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "Onlogn", MERGE));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "Onlogn", QUICK));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On", COUNTING));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On", RADIX));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On2", BUBBLE));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On2", INSERTION));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On2", SELECTION));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"Onlogn", HEAP));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"Onlogn", MERGE));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"Onlogn", QUICK));
 }
 
 TEST(Sort, Test2) //TESTA UM VETOR COM APENAS UM DADO
@@ -28,14 +28,14 @@ TEST(Sort, Test2) //TESTA UM VETOR COM APENAS UM DADO
   int vec[1] = {7};
   int tam = 1;
 
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On", COUNTING));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On", RADIX));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On2", BUBBLE));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On2", INSERTION));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "On2", SELECTION));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "Onlogn", HEAP));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "Onlogn", MERGE));
-  TEST_ASSERT_EQUAL(1, sort(vec, tam, "Onlogn", QUICK));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On", COUNTING));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On", RADIX));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On2", BUBBLE));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On2", INSERTION));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"On2", SELECTION));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"Onlogn", HEAP));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"Onlogn", MERGE));
+  TEST_ASSERT_EQUAL(1, sort(vec, tam, (char *)"Onlogn", QUICK));
 }
 
 TEST(Sort, Test3) //TESTA UM VETOR COM 2 DADOS
@@ -52,14 +52,14 @@ TEST(Sort, Test3) //TESTA UM VETOR COM 2 DADOS
   int expected[2] = {3, 7};
   int tam = 2;
 
-  sort(vec1, tam, "On", COUNTING);
-  sort(vec2, tam, "On", RADIX);
-  sort(vec3, tam, "On2", BUBBLE);
-  sort(vec4, tam, "On2", INSERTION);
-  sort(vec5, tam, "On2", SELECTION);
-  sort(vec6, tam, "Onlogn", HEAP);
-  sort(vec7, tam, "Onlogn", MERGE);
-  sort(vec8, tam, "Onlogn", QUICK);
+  sort(vec1, tam, (char *)"On", COUNTING);
+  sort(vec2, tam, (char *)"On", RADIX);
+  sort(vec3, tam, (char *)"On2", BUBBLE);
+  sort(vec4, tam, (char *)"On2", INSERTION);
+  sort(vec5, tam, (char *)"On2", SELECTION);
+  sort(vec6, tam, (char *)"Onlogn", HEAP);
+  sort(vec7, tam, (char *)"Onlogn", MERGE);
+  sort(vec8, tam, (char *)"Onlogn", QUICK);
 
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec1, expected, tam);
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec2, expected, tam);
@@ -85,14 +85,14 @@ TEST(Sort, Test4) //TESTA UM VETOR COM 20 DADOS
   int expected[20] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19};
   int tam = 20;
 
-  sort(vec1, tam, "On", COUNTING);
-  sort(vec2, tam, "On", RADIX);
-  sort(vec3, tam, "On2", BUBBLE);
-  sort(vec4, tam, "On2", INSERTION);
-  sort(vec5, tam, "On2", SELECTION);
-  sort(vec6, tam, "Onlogn", HEAP);
-  sort(vec7, tam, "Onlogn", MERGE);
-  sort(vec8, tam, "Onlogn", QUICK);
+  sort(vec1, tam, (char *)"On", COUNTING);
+  sort(vec2, tam, (char *)"On", RADIX);
+  sort(vec3, tam, (char *)"On2", BUBBLE);
+  sort(vec4, tam, (char *)"On2", INSERTION);
+  sort(vec5, tam, (char *)"On2", SELECTION);
+  sort(vec6, tam, (char *)"Onlogn", HEAP);
+  sort(vec7, tam, (char *)"Onlogn", MERGE);
+  sort(vec8, tam, (char *)"Onlogn", QUICK);
 
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec1, expected, tam);
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec2, expected, tam);
@@ -118,14 +118,14 @@ TEST(Sort, Test5) //TESTA A ORDENAÇÃO DE UM VETOR EM ORDEM CRESCENTE COM 10 DA
   int expected[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
   int tam = 10;
 
-  sort(vec1, tam, "On", COUNTING);
-  sort(vec2, tam, "On", RADIX);
-  sort(vec3, tam, "On2", BUBBLE);
-  sort(vec4, tam, "On2", INSERTION);
-  sort(vec5, tam, "On2", SELECTION);
-  sort(vec6, tam, "Onlogn", HEAP);
-  sort(vec7, tam, "Onlogn", MERGE);
-  sort(vec8, tam, "Onlogn", QUICK);
+  sort(vec1, tam, (char *)"On", COUNTING);
+  sort(vec2, tam, (char *)"On", RADIX);
+  sort(vec3, tam, (char *)"On2", BUBBLE);
+  sort(vec4, tam, (char *)"On2", INSERTION);
+  sort(vec5, tam, (char *)"On2", SELECTION);
+  sort(vec6, tam, (char *)"Onlogn", HEAP);
+  sort(vec7, tam, (char *)"Onlogn", MERGE);
+  sort(vec8, tam, (char *)"Onlogn", QUICK);
 
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec1, expected, tam);
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec2, expected, tam);
@@ -151,14 +151,14 @@ TEST(Sort, Test6) //TESTA A ORDENAÇÃO DE UM VETOR JÁ ORGANIZADO EM ORDEM CRES
   int expected[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
   int tam = 10;
 
-  sort(vec1, tam, "On", COUNTING);
-  sort(vec2, tam, "On", RADIX);
-  sort(vec3, tam, "On2", BUBBLE);
-  sort(vec4, tam, "On2", INSERTION);
-  sort(vec5, tam, "On2", SELECTION);
-  sort(vec6, tam, "Onlogn", HEAP);
-  sort(vec7, tam, "Onlogn", MERGE);
-  sort(vec8, tam, "Onlogn", QUICK);
+  sort(vec1, tam, (char *)"On", COUNTING);
+  sort(vec2, tam, (char *)"On", RADIX);
+  sort(vec3, tam, (char *)"On2", BUBBLE);
+  sort(vec4, tam, (char *)"On2", INSERTION);
+  sort(vec5, tam, (char *)"On2", SELECTION);
+  sort(vec6, tam, (char *)"Onlogn", HEAP);
+  sort(vec7, tam, (char *)"Onlogn", MERGE);
+  sort(vec8, tam, (char *)"Onlogn", QUICK);
 
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec1, expected, tam);
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec2, expected, tam);
@@ -184,14 +184,14 @@ TEST(Sort, Test7) //TESTA A ORDENAÇÃO DE NÚMEROS IGUAIS
   int expected[6] = {7, 7, 7, 7, 7, 7};
   int tam = 6;
 
-  sort(vec1, tam, "On", COUNTING);
-  sort(vec2, tam, "On", RADIX);
-  sort(vec3, tam, "On2", BUBBLE);
-  sort(vec4, tam, "On2", INSERTION);
-  sort(vec5, tam, "On2", SELECTION);
-  sort(vec6, tam, "Onlogn", HEAP);
-  sort(vec7, tam, "Onlogn", MERGE);
-  sort(vec8, tam, "Onlogn", QUICK);
+  sort(vec1, tam, (char *)"On", COUNTING);
+  sort(vec2, tam, (char *)"On", RADIX);
+  sort(vec3, tam, (char *)"On2", BUBBLE);
+  sort(vec4, tam, (char *)"On2", INSERTION);
+  sort(vec5, tam, (char *)"On2", SELECTION);
+  sort(vec6, tam, (char *)"Onlogn", HEAP);
+  sort(vec7, tam, (char *)"Onlogn", MERGE);
+  sort(vec8, tam, (char *)"Onlogn", QUICK);
 
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec1, expected, tam);
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec2, expected, tam);
@@ -217,14 +217,14 @@ TEST(Sort, Test8) //TESTA A ORDENAÇÃO DE UM VETOR COM MAIS DE UM NÚMERO REPET
   int expected[7] = {3, 3, 3, 7, 7, 7, 7};
   int tam = 7;
 
-  sort(vec1, tam, "On", COUNTING);
-  sort(vec2, tam, "On", RADIX);
-  sort(vec3, tam, "On2", BUBBLE);
-  sort(vec4, tam, "On2", INSERTION);
-  sort(vec5, tam, "On2", SELECTION);
-  sort(vec6, tam, "Onlogn", HEAP);
-  sort(vec7, tam, "Onlogn", MERGE);
-  sort(vec8, tam, "Onlogn", QUICK);
+  sort(vec1, tam, (char *)"On", COUNTING);
+  sort(vec2, tam, (char *)"On", RADIX);
+  sort(vec3, tam, (char *)"On2", BUBBLE);
+  sort(vec4, tam, (char *)"On2", INSERTION);
+  sort(vec5, tam, (char *)"On2", SELECTION);
+  sort(vec6, tam, (char *)"Onlogn", HEAP);
+  sort(vec7, tam, (char *)"Onlogn", MERGE);
+  sort(vec8, tam, (char *)"Onlogn", QUICK);
 
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec1, expected, tam);
   TEST_ASSERT_EQUAL_INT32_ARRAY(vec2, expected, tam);

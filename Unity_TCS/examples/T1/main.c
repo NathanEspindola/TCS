@@ -21,7 +21,7 @@ int main(void)
     printf("Unsorted: \n");
     print_array(a, length);
 
-    int status = sort(a, length, "On2", SELECTION);
+    int status = sort(a, length, (char *)"On2", SELECTION);
     printf("Status: %d\n", status);
     
     printf("Sorted: \n");
